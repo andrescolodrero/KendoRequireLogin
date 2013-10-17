@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		
+
+		<link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+		<link href="kendo/styles/kendo.indexedlistview.css" rel="stylesheet" />
+		<link href="styles/main.css" rel="stylesheet" />
+	</head>
+	<body id="body">
+
+		<!-- Home Views -->
+	<div data-role="view" id="login-view" 
+	data-layout="login-layout" data-title="Login" data-model="app.loginView.viewModel" data-show="app.loginView.onShow" 
+	>
+			<ul>
+				<li>
+					<strong>Username:</strong> owner
+				</li>
+				<li>
+					<strong>Password:</strong> p@ssword123
+				</li>
+			</ul>
+
+			<input type="text" placeholder="Username" data-bind="value: loginUsername" />
+			<input type="password" placeholder="Password" data-bind="value: loginPassword" />
+			<div data-type="button" data-role="button" >Log In</div>
+			<a href="#register-view" data-role="button">Register</a>
+		</div>
+		
+		<div data-role="view" id="home-view" 
+				data-layout="home-layout" data-title="Home" 
+				>
+			<p> hello Home </p>
+		</div>
+	
+	<div data-role="layout" data-id="login-layout"  >
+			<div data-role="header">
+				<div data-role="navbar">
+					<div class="app-icon" data-align="left"></div>
+					<span data-role="view-title"></span>
+					
+				</div>
+				
+			</div>
+	</div>
+
+			<div data-role="layout" data-id="home-layout">
+			<div data-role="header">
+				<div data-role="navbar">
+					<div class="app-icon" data-align="left"></div>
+					<span data-role="view-title"></span>
+					
+				</div>
+				
+			</div>
+			
+			<div data-role="footer">
+				<div data-role="tabstrip">
+					<a href="#genres-view" data-icon="home">Home</a>
+					<a href="#search-view" data-icon="search">Search</a>
+					<a href="#cart-view" data-icon="cart">
+						Cart<span class="cart-badge km-badge" style="display: none;"></span>
+					</a>
+					<a href="#account-view" data-icon="contacts">Account</a>
+					<a href="#about-view" data-icon="about">About</a>
+				</div>
+			</div>
+	
+		<!-- Scripts -->
+		
+		
+
+		<script data-main="scripts/main.js" src="scripts/require.js"></script>
+	</body>
+</html>
